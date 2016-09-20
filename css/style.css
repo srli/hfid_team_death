@@ -1,8 +1,26 @@
 body {
 	padding-top: 70px;
+	font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
 }
 
 .inspirational-image {
 	width: 100%
 }
 
+.modal-body {
+	padding: 20px;
+}
+
+.modal-body > p {
+	padding: 15px;
+	font-size: 18px;
+}
+
+.inspirational-design-subheader {
+	text-align: center;
+}
+
+.inspirational-design-header {
+	font-size: 80px;
+	text-align: center;
+}
