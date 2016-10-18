@@ -66,35 +66,69 @@
 
       <h2>What is your design?</h2>
 
-<p>We have designed a web app (tentatively named Leif)  that will provide a user a way to quickly plan a day trip, taking into account their preferences and time availability. Leif is designed for adults who find themselves with some time to spare in a city, but don’t want to have to plan an entire day trip themselves. Leif makes trip planning easy, through a combination of our app’s suggestions and the user’s preferences.</p>
+      <p>We have designed a web app (tentatively named Leif)  that will provide a user a way to quickly plan a day trip, taking into account their preferences and time availability. Leif is designed for adults who find themselves with some time to spare in a city, but don’t want to have to plan an entire day trip themselves. Leif makes trip planning easy, through a combination of our app’s suggestions and the user’s preferences.</p>
 
-<h2>How does it work?</h2>
+      <h2>How does it work?</h2>
 
-<p>The website starts off by loading an information page about our app. This allows first time users to learn more as they enter.  From there, they can launch the web app and enter their amount of free time. We always want consider the user’s available time. With the time entered, our app generates a small list of destination options for our user. Once they select an option from that list, it becomes locked in, and a progress bar at the top shows how much of the free time is used. The next selection block fills with possible stops which fit in the remaining time allotment, and may include options from the previous selection block. This allows the user to never overfill their time while still maintaining access to two options from the same block if they liked them both. If the two options do not fit in the available time, then the user will be unable to do both sites. Once all free time is booked up, or at any point that the user decides they have enough to do, the user will hit the finalize trip button. At this point, we will also allow the user to reorder the destinations of their trip at this point. Once finalized, the itinerary can be exported to Google Maps as a multi-point trip. From there, it is our user who must get to each site, spend the recommended amount of time, and keep moving. We do not want to create either navigation tools, or a timer for our user. Both of these would be data-intensive, clunky through a mobile site, and neither are the focus of this project.</p>
-<p>Any user can personalize their experience on our site by signing in with Google or Facebook Auth. We chose these two services because they are easy to implement, and almost everyone has an account with one service, if not both. Once signed in, a preferences page will be generated with the default setting. At this point, the user may customize the places that appear by setting cost, activity type (museums, parks, etc), energy level (low, medium, high), food preferences (italian, mexican, etc), and type of travel (car, walk, public transport, etc). After these are set, the app will use these settings to locate sites which are a better fit for our user. These preferences can be changed at any point for ease.</p>
+      <p>The website starts off by loading an information page about our app. This allows first time users to learn more as they enter.  From there, they can launch the web app and enter their amount of free time. We always want consider the user’s available time. With the time entered, our app generates a small list of destination options for our user. Once they select an option from that list, it becomes locked in, and a progress bar at the top shows how much of the free time is used. The next selection block fills with possible stops which fit in the remaining time allotment, and may include options from the previous selection block. This allows the user to never overfill their time while still maintaining access to two options from the same block if they liked them both. If the two options do not fit in the available time, then the user will be unable to do both sites. Once all free time is booked up, or at any point that the user decides they have enough to do, the user will hit the finalize trip button. At this point, we will also allow the user to reorder the destinations of their trip at this point. Once finalized, the itinerary can be exported to Google Maps as a multi-point trip. From there, it is our user who must get to each site, spend the recommended amount of time, and keep moving. We do not want to create either navigation tools, or a timer for our user. Both of these would be data-intensive, clunky through a mobile site, and neither are the focus of this project.</p>
 
-<h2>How well does it meet user needs?  In what ways does it fall short?</h2>
+      <p>Any user can personalize their experience on our site by signing in with Google or Facebook Auth. We chose these two services because they are easy to implement, and almost everyone has an account with one service, if not both. Once signed in, a preferences page will be generated with the default setting. At this point, the user may customize the places that appear by setting cost, activity type (museums, parks, etc), energy level (low, medium, high), food preferences (italian, mexican, etc), and type of travel (car, walk, public transport, etc). After these are set, the app will use these settings to locate sites which are a better fit for our user. These preferences can be changed at any point for ease.</p>
 
-<p>The webapp is fast, even for first time users, and has an intuitive navigation that eliminates confusion  initially and allows expedient usage as usage continues. We tried to limit the webapp down to as few screens as possible and make all the refining as optional as possible. The app does everything for the user, while still allowing a degree of choice through multiple options for each stage of the journey and the ability to set preferences.</p>
+      <h2>How well does it meet user needs?  In what ways does it fall short?</h2>
 
-<p>However, by virtue of being a webapp, it can’t optimize battery/resource usage and has to deal with some of the clunkier aspects of mobile browsers (no swiping, difficult keyboard). We’ve tried to work around this by making most of the heavy lifting done by our servers or Google Maps, but the browser navigation and data entering is still worse than we’d like.</p>
+      <p>The webapp is fast, even for first time users, and has an intuitive navigation that eliminates confusion  initially and allows expedient usage as usage continues. We tried to limit the webapp down to as few screens as possible and make all the refining as optional as possible. The app does everything for the user, while still allowing a degree of choice through multiple options for each stage of the journey and the ability to set preferences.</p>
 
-<h2>What important alternative designs did you consider, either initially or during the refinement of this idea?   Why did you reject them/prefer the one you chose?</h2>
+      <p>However, by virtue of being a webapp, it can’t optimize battery/resource usage and has to deal with some of the clunkier aspects of mobile browsers (no swiping, difficult keyboard). We’ve tried to work around this by making most of the heavy lifting done by our servers or Google Maps, but the browser navigation and data entering is still worse than we’d like.</p>
 
-<p>The two major alternative designs that we considered were choosing to create an app instead of a website and deciding how we allow the user to choose what activities they want to include in their schedule. We chose to make the product a website because the group agreed that downloading apps is too much effort and takes up too many resources for most people. A website doesn’t take up space on your phone, and for something that you’ll only be using when you’re actively traveling, it would be a waste of storage to have an app sitting on your phone all the time. While the website may allow for fewer types of gestures (no swiping), the benefit of easy access without losing valuable storage space is very important.</p>
+      <h2>What important alternative designs did you consider, either initially or during the refinement of this idea?   Why did you reject them/prefer the one you chose?</h2>
 
-	<p>The other main alternative design that we considered was a slight different screen that allows that user to set their schedule. This screen, our original idea, had a series of “cards” that the user could swipe through to find the activity that they felt was most interesting. This was inspired by the famous Tinder swipe control, mixed with the familiar cards of Google Now. After doing user testing, we received feedback that this part of the website was difficult to figure out. Users didn’t know how many options that they had in the revolving carousel of activities, unsure if swiping through would take them back to the beginning or infinite scrolling. We redesigned to have 3 highly visible tiles that the user chooses one of.</p>
+      <p>Pictured below are our original paper prototypes that we did tests with. We redesigned the application following user input, so that they now have more input into their trip planning, as described in the "How does it work" section above.</p>
+      <div class="container">
+          <div class="row">
+              <img src="../imgs/usability_prototypes/1allow_location.jpg" class="img-responsive col-md-4">
+              <img src="../imgs/usability_prototypes/2plan_trip.jpg" class="img-responsive col-md-4">
+              <img src="../imgs/usability_prototypes/3energy_level.jpg" class="img-responsive col-md-4">
+          </div>
+      </div>
 
-<h2>What key insights did you gain in trying to produce a design that addresses your brief?</h2>
+      <div class="container">
+          <div class="row">
+              <img src="../imgs/usability_prototypes/load_page.jpg" class="img-responsive col-md-4">
+              <img src="../imgs/usability_prototypes/4itinerary_view.jpg" class="img-responsive col-md-4">
+              <img src="../imgs/usability_prototypes/5card_expand.jpg" class="img-responsive col-md-4">
+          </div>
+      </div>
 
-<ul>
-<li>Keypads are confusing, because they are most often used in the context of phone calls or complex numeric entry (like Venmo). We shouldn’t use them for numerical input. Since our app is only for day trip planning, we can probably use a numeric slider from 1 - 16 hours.</li>
-<li>Preferences (when provided) should be all pre-selected, as more often than not people will prefer to have a box checked</li>
-<li>We should always have a confirmation button, and said button should be big and visible at the bottom of the screen</li>
-<li>Text fields should indicate whether a user has interacted with it already or not, possibly through changing the text inside the textbox</li>
-<li>We should display all the options that a user can select, so that they aren’t uneasy about possibly missing something better.
-Having an app that automatically generates the entire itinerary at once is very easy and quick, but is inflexible in case the user doesn’t want to exactly follow our suggested schedule. By deciding with the user one destination at a time, we can limit issues with finding the optimal route to take and make sure that time constraints are respected.</li>
-</ul>
+      <div class="container">
+          <div class="row">
+              <img src="../imgs/usability_prototypes/6swipe.jpg" class="img-responsive col-md-4">
+              <img src="../imgs/usability_prototypes/7new_card.jpg" class="img-responsive col-md-4">
+              <img src="../imgs/usability_prototypes/8dislike.jpg" class="img-responsive col-md-4">
+          </div>
+      </div>
+
+      <div class="container">
+          <div class="row">
+              <img src="../imgs/usability_prototypes/9export_maps.jpg" class="img-responsive col-md-4">
+              <img src="../imgs/usability_prototypes/signin.jpg" class="img-responsive col-md-4">
+              <img src="../imgs/usability_prototypes/10preferences.jpg" class="img-responsive col-md-4">
+          </div>
+      </div>
+
+      <p>The two major alternative designs that we considered were choosing to create an app instead of a website and deciding how we allow the user to choose what activities they want to include in their schedule. We chose to make the product a website because the group agreed that downloading apps is too much effort and takes up too many resources for most people. A website doesn’t take up space on your phone, and for something that you’ll only be using when you’re actively traveling, it would be a waste of storage to have an app sitting on your phone all the time. While the website may allow for fewer types of gestures (no swiping), the benefit of easy access without losing valuable storage space is very important.</p>
+
+      <p>The other main alternative design that we considered was a slight different screen that allows that user to set their schedule. This screen, our original idea, had a series of “cards” that the user could swipe through to find the activity that they felt was most interesting. This was inspired by the famous Tinder swipe control, mixed with the familiar cards of Google Now. After doing user testing, we received feedback that this part of the website was difficult to figure out. Users didn’t know how many options that they had in the revolving carousel of activities, unsure if swiping through would take them back to the beginning or infinite scrolling. We redesigned to have 3 highly visible tiles that the user chooses one of.</p>
+
+      <h2>What key insights did you gain in trying to produce a design that addresses your brief?</h2>
+
+      <ul>
+      <li>Keypads are confusing, because they are most often used in the context of phone calls or complex numeric entry (like Venmo). We shouldn’t use them for numerical input. Since our app is only for day trip planning, we can probably use a numeric slider from 1 - 16 hours.</li>
+      <li>Preferences (when provided) should be all pre-selected, as more often than not people will prefer to have a box checked</li>
+      <li>We should always have a confirmation button, and said button should be big and visible at the bottom of the screen</li>
+      <li>Text fields should indicate whether a user has interacted with it already or not, possibly through changing the text inside the textbox</li>
+      <li>We should display all the options that a user can select, so that they aren’t uneasy about possibly missing something better.
+      Having an app that automatically generates the entire itinerary at once is very easy and quick, but is inflexible in case the user doesn’t want to exactly follow our suggested schedule. By deciding with the user one destination at a time, we can limit issues with finding the optimal route to take and make sure that time constraints are respected.</li>
+      </ul>
 
 
     </div>
