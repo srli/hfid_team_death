@@ -62,221 +62,41 @@
     <!-- Page Content -->
     <div class="container">
 
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <h1 class="inspirational-design-header">Design Development</h1>
-            </div>
-              <h2 class="inspirational-design-subheader"><p class="lead">Our five inspirational designs, click a thumbnail for more information!</p></h2>
-              <div class="row">
-                <div class="col-lg-4 col-sm-6 col-xs-12" data-toggle="modal" data-target="#imenuproModal"> <h3>IMenuPro</h3>
-                    <a href="#">
-                         <img src="../imgs/inspirational_imgs/imenupro.jpg" class="thumbnail img-responsive inspirational-image">
-                    </a>
-                </div>
-                 <div class="col-lg-4 col-sm-6 col-xs-12" data-toggle="modal" data-target="#kayakModal"> <h3>Kayak</h3>
-                    <a href="#">
-                         <img src="../imgs/inspirational_imgs/kayak2.png" class="thumbnail img-responsive inspirational-image">
-                    </a>
-                </div>
-                 <div class="col-lg-4 col-sm-6 col-xs-12" data-toggle="modal" data-target="#travefyModal"> <h3>Travefy</h3>
-                    <a href="#">
-                         <img src="../imgs/inspirational_imgs/travefy.png" class="thumbnail img-responsive inspirational-image">
-                    </a>
-                </div>
-                 <div class="col-lg-4 col-sm-6 col-xs-12" data-toggle="modal" data-target="#triphoboModal"> <h3>Triphobo</h3>
-                    <a href="#">
-                         <img src="../imgs/inspirational_imgs/triphobo1.png" class="thumbnail img-responsive inspirational-image">
-                    </a>
-                </div>
-                 <div class="col-lg-4 col-sm-6 col-xs-12" data-toggle="modal" data-target="#tripadvisorModal"> <h3>TripAdvisor</h3>
-                    <a href="#">
-                         <img src="../imgs/inspirational_imgs/tripadvisor.png" class="thumbnail img-responsive inspirational-image">
-                    </a>
-                </div>
-              </div>
-        </div>
-        <!-- /.row -->
+      <h2>What is your design?</h2>
+
+<p>We have designed a web app (tentatively named Leif)  that will provide a user a way to quickly plan a day trip, taking into account their preferences and time availability. Leif is designed for adults who find themselves with some time to spare in a city, but don’t want to have to plan an entire day trip themselves. Leif makes trip planning easy, through a combination of our app’s suggestions and the user’s preferences.</p>
+
+<h2>How does it work?</h2>
+
+<p>The website starts off by loading an information page about our app. This allows first time users to learn more as they enter.  From there, they can launch the web app and enter their amount of free time. We always want consider the user’s available time. With the time entered, our app generates a small list of destination options for our user. Once they select an option from that list, it becomes locked in, and a progress bar at the top shows how much of the free time is used. The next selection block fills with possible stops which fit in the remaining time allotment, and may include options from the previous selection block. This allows the user to never overfill their time while still maintaining access to two options from the same block if they liked them both. If the two options do not fit in the available time, then the user will be unable to do both sites. Once all free time is booked up, or at any point that the user decides they have enough to do, the user will hit the finalize trip button. At this point, we will also allow the user to reorder the destinations of their trip at this point. Once finalized, the itinerary can be exported to Google Maps as a multi-point trip. From there, it is our user who must get to each site, spend the recommended amount of time, and keep moving. We do not want to create either navigation tools, or a timer for our user. Both of these would be data-intensive, clunky through a mobile site, and neither are the focus of this project.</p>
+<p>Any user can personalize their experience on our site by signing in with Google or Facebook Auth. We chose these two services because they are easy to implement, and almost everyone has an account with one service, if not both. Once signed in, a preferences page will be generated with the default setting. At this point, the user may customize the places that appear by setting cost, activity type (museums, parks, etc), energy level (low, medium, high), food preferences (italian, mexican, etc), and type of travel (car, walk, public transport, etc). After these are set, the app will use these settings to locate sites which are a better fit for our user. These preferences can be changed at any point for ease.</p>
+
+<h2>How well does it meet user needs?  In what ways does it fall short?</h2>
+
+<p>The webapp is fast, even for first time users, and has an intuitive navigation that eliminates confusion  initially and allows expedient usage as usage continues. We tried to limit the webapp down to as few screens as possible and make all the refining as optional as possible. The app does everything for the user, while still allowing a degree of choice through multiple options for each stage of the journey and the ability to set preferences.</p>
+
+<p>However, by virtue of being a webapp, it can’t optimize battery/resource usage and has to deal with some of the clunkier aspects of mobile browsers (no swiping, difficult keyboard). We’ve tried to work around this by making most of the heavy lifting done by our servers or Google Maps, but the browser navigation and data entering is still worse than we’d like.</p>
+
+<h2>What important alternative designs did you consider, either initially or during the refinement of this idea?   Why did you reject them/prefer the one you chose?</h2>
+
+<p>The two major alternative designs that we considered were choosing to create an app instead of a website and deciding how we allow the user to choose what activities they want to include in their schedule. We chose to make the product a website because the group agreed that downloading apps is too much effort and takes up too many resources for most people. A website doesn’t take up space on your phone, and for something that you’ll only be using when you’re actively traveling, it would be a waste of storage to have an app sitting on your phone all the time. While the website may allow for fewer types of gestures (no swiping), the benefit of easy access without losing valuable storage space is very important.</p>
+
+	<p>The other main alternative design that we considered was a slight different screen that allows that user to set their schedule. This screen, our original idea, had a series of “cards” that the user could swipe through to find the activity that they felt was most interesting. This was inspired by the famous Tinder swipe control, mixed with the familiar cards of Google Now. After doing user testing, we received feedback that this part of the website was difficult to figure out. Users didn’t know how many options that they had in the revolving carousel of activities, unsure if swiping through would take them back to the beginning or infinite scrolling. We redesigned to have 3 highly visible tiles that the user chooses one of.</p>
+
+<h2>What key insights did you gain in trying to produce a design that addresses your brief?</h2>
+
+<ul>
+<li>Keypads are confusing, because they are most often used in the context of phone calls or complex numeric entry (like Venmo). We shouldn’t use them for numerical input. Since our app is only for day trip planning, we can probably use a numeric slider from 1 - 16 hours.</li>
+<li>Preferences (when provided) should be all pre-selected, as more often than not people will prefer to have a box checked</li>
+<li>We should always have a confirmation button, and said button should be big and visible at the bottom of the screen</li>
+<li>Text fields should indicate whether a user has interacted with it already or not, possibly through changing the text inside the textbox</li>
+<li>We should display all the options that a user can select, so that they aren’t uneasy about possibly missing something better.
+Having an app that automatically generates the entire itinerary at once is very easy and quick, but is inflexible in case the user doesn’t want to exactly follow our suggested schedule. By deciding with the user one destination at a time, we can limit issues with finding the optimal route to take and make sure that time constraints are respected.</li>
+</ul>
+
 
     </div>
     <!-- /.container -->
-
-    <!-- Modal -->
-    <div class="modal fade" id="imenuproModal" tabindex="-1" role="dialog">
-      <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h2 class="modal-title">IMenuPro</h2>
-            <h6>Gabe Butterick</h6>
-          </div>
-          <div class="modal-body">
-            <p>Imenupro is a website designed to create menus for restaurants in which you can pick which foods and categories should be on the menu. It has a similar ‘drag and drop from a pool, to what you want’ method we were thinking of using for the travel app. It lets the user create headers for activities to go under. Though it generates menus instead of travel itineraries, the idea is roughly the same if you replace meals with destinations and activities.<p>
-
-            <h4>What’s good about it is:</h4>
-                <ul>
-                    <li>It allows easy list building after initial setup time</li>
-                    <li>Aesthetic is nice</li>
-                    <li>Categorization</li>
-                    <li>Demo with one click</li>
-                </ul>
-            <h4>What’s bad about it is:</h4>
-                <ul>
-                    <li>Menu items must be entered in manually by the user</li>
-                    <li>Categories are also not automatic</li>
-                    <li> Requires initial setup</li>
-                    <li>Requires signup</li>
-                </ul>
-
-            <img src="../imgs/inspirational_imgs/imenupro2.png" class="img-responsive">
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="modal fade" id="travefyModal" tabindex="-1" role="dialog">
-      <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h2 class="modal-title">Travefy</h2>
-            <h6>Sophie Li</h6>
-          </div>
-          <div class="modal-body">
-            <p>Collaborative itinerary generation. Like Google Docs for making travel plans. Travefy does not produce itineraries or generate plans, but it does provide a clean UI for the user to lay out their plans. If people are looking for ideas, there is a rudimentary map search interface available, but the animations are heavy and it is not intuitive to navigate these suggestions. You also can’t add them to the itinerary automatically.<p>
-            <img src="../imgs/inspirational_imgs/travefy.png" class="img-responsive">
-            <p>You can start polls for people to decide what they want to do as a group. This, in addition to the group chat feature makes it very useful in deciding what a group should do as a whole. </p>
-            <img src="../imgs/inspirational_imgs/travefy2.png" class="img-responsive">
-            <p>Adding a new event is cumbersome, the interface has too many input fields and not enough automatic filling of fields. Activities must be manually filled out and time has to be manually allocated. However, it’s very useful to be able to add specific people as well prices of locations.</p>
-            <img src="../imgs/inspirational_imgs/travefy3.png" class="img-responsive">
-            <p>I find the expenses page the most interesting. It’s similar to Splitwise but seems to work at a more basic level, where expenses can be recorded between members of a trip and then split. It may be useful for what us to give the users of our application a sense of how much they would be spending on an automatically generated trip. But since we only have one person, perhaps this interface isn’t really necessary at all.</p>
-            <img src="../imgs/inspirational_imgs/travefy4.png" class="img-responsive">
-            <p>Travefy is very good at what it does -- collaborate itinerary generation, but we can probably cut back on a lot of the features because we only focus on one person.</p>
-
-            <h4>Good</h4>
-                <ul>
-                    <li>Simple, clean UI. The buttons are responsive and you can add events like flights and hotel bookings very easily</li>
-                    <li>The icons are very clear. Users know right away what each icon does and how to interact with the interface</li>
-                    <li>Helper tips appear at first, then automatically disappear when the user begins to interact with the elements. They aren’t overly intrusive, the developers trust that their users can figure it out</li>
-                </ul>
-            <h4>Bad</h4>
-                <ul>
-                    <li>Elements are bulky, each event takes up too much screen space so you have to do a lot of scrolling to see all events. There is no way to simplify the view</li>
-                    <li>The map is bulky. Loading events takes too long and there is no way to automatically add a search to the itinerary</li>
-                    <li> While it looks good on a large screen, the site is not mobile friendly. (Elements being to overlap). There is also no way to print the itinerary. </li>
-                    <li>Not useful for people looking for ideas for a trip, or for groups smaller than 4 or so. Itinerary is completely self generated -- this is more of an organizational app</li>
-                </ul>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-<div class="modal fade" id="triphoboModal" tabindex="-1" role="dialog">
-      <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h2 class="modal-title">TripHobo</h2>
-            <h6>Mary Martin</h6>
-          </div>
-          <div class="modal-body">
-            <p>TripHobo.com is a service very similar to our idea; creating schedules and finding points of interest for people who are traveling. The service also helps book hotels and schedules in enough time for traveling from one location to another. <p>
-            <img src="../imgs/inspirational_imgs/triphobo.jpg" class="img-responsive">
-            <p>The website opens by letting you select what city you are traveling to. It then suggests flights from where you are to the city you selected, allowing you to change the dates and the flights very simply. You can then either plan your own trip, or allow the service to plan for you.</p>
-            <img src="../imgs/inspirational_imgs/triphobo1.png" class="img-responsive">
-            <p>When you allow the service to plan for you, a sliding popup loads with suggested hotels, with rankings and reviews. Once you dismiss that, the actual schedule is revealed. This UI is very well done, allowing drag-and-drop repositioning of any events/activities and meals. You can very easily “Add Places” using the menu, which lists the top suggested attractions in the city, including museums, food and other fun things to do. There is a separate schedule for each day and the activities are planned according to the suggested time that it takes to do each of them. In order to give you a general idea of how far you’ll be traveling, there is a map view that shows all of the attractions located throughout the city. In an especially clever piece of planning, each day’s schedule begins and ends at your hotel. </p>
-            <img src="../imgs/inspirational_imgs/triphobo3.jpg" class="img-responsive">
-            <p>Overall, the design for this service is very well done, with intuitive controls and easily modifiable content. It is thorough without being overwhelming, which can be a very difficult balance to achieve. For planning a basic, multi-day trip to a city, this seems to be a very easy way to reach the most popular sites without stressing about planning it all yourself. One weakness of the site is that there is a lot of stuff happening. It’s not completely overwhelming, but it is a lot of information at once, ranging from flights to hotels to tours. While the website does help you book everything, it is still a lot of information that you have to enter and hope it works integrating with the partner sites. Another weakness is the lack of mobile site. When you try and plan a trip while on a mobile device, it just suggests that you download the app, which is addition effort and phone space that many people aren’t willing to deal with. Other than the stress of booking things and the lack of a mobile site, there really isn’t that much that TripHobo can improve on and we are planning on taking a lot of inspiration from them, especially the drag-and-drop scheduling and the map view. We are planning on learning from the TripHobo weaknesses and creating a mobile site, while also not integrating everything about travel into one planner in an effort to keep it simple. </p>
-
-            <h4>Audience</h4>
-            <p>Anyone planning a multi-day trip to a city they don’t know by inputting the location destination and then offering suggestions for where to stay and what to do while there</p>
-            <h4>Features</h4>
-            <p>helps book a hotel and other activities, offers a lot of options, interactive (drag and drop options)</p>
-            <h4>Improvements</h4>
-            <p>possibly overwhelming amount of information, popup screens that interfere with the natural flow of the website, no mobile website (must download app)</p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="modal fade" id="tripadvisorModal" tabindex="-1" role="dialog">
-      <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h2 class="modal-title">TripAdvisor</h2>
-            <h6>Jacob Riedel</h6>
-          </div>
-          <div class="modal-body">
-            <p>TripAdvisor is a close match to our idea. This service allows users to search for activities in local and remote areas and receive other users’ feedback on those activities as well as book those activities on the spot.<p>
-            <img src="../imgs/inspirational_imgs/tripadvisor.png" class="img-responsive">
-            <p> It does go beyond our service in several aspects. By not restricting the search to your local area, TripAdvisor allows users to plan ahead, making it possible to research your entire trip before you even leave. The user feedback on the site is another over-extension from our service. This feedback does not fit our project’s scope because it makes the process of selecting a possible destination in the local are far more complicated. The user should be given a short list of option, each with a description. This prevents the level of information overload found on TripAdvisor and speeds up the selection process for a possible destination.</p>
-            <img src="../imgs/inspirational_imgs/tripadvisor3.png" class="img-responsive">
-            <h6></h6>
-
-            <h4>Audience</h4>
-            <p> People who like to review their travel destinations and prepare ahead of time. They are usually very active internet users. They will read many different reviews before booking with a particular hotel or service.</p>
-            <h4>Features</h4>
-            <p>One of the highest rated review services. The site is highly trusted by its users. Anyone can book through the site, making it an All-in-One travel site.</p>
-            <h4>Improvements</h4>
-            <p>It does not compare prices between different site, often can be more expensive than other sites for similar services. No great way to filter down the list of results from a search, which often provides a huge number of possible options when traveling.</p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="modal fade" id="kayakModal" tabindex="-1" role="dialog">
-      <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h2 class="modal-title">Kayak</h2>
-            <h6>Keenan Zucker</h6>
-          </div>
-          <div class="modal-body">
-            <p>Kayak is one of the most popular sites for trip planning, containing three main components: Flights, Cars, and Hotels. The interface is meant to be simple and easy to operate, and allows comparisons across different search engines for different travel components.<p>
-            <img src="../imgs/inspirational_imgs/kayak2.png" class="img-responsive">
-            <p>Each of the three components are seen as tabs across the top bar. We we see the 'hotels' tab. The interface shows a simple bar entering a destination as well as options for dates and number of people. The calendar interface is particularly helpful, as it shows two months side by side, and highlights the dates that you entered, making it easy to sync up with the plans you already have. Clicking on the flights or cars tab keeps the same interface, but the boxes content may change. But the overall structure stays the same, which may make it easy to confuse. I've accidentally put in information thinking it was the flights tab when it was the hotels because they look so similar. For our product, we want to keep a simple interface as well, but we will have less options, since we are not going to address multiple facets of a trip. We are going to focus on simply a day trip's activities, so we will not worry about things like flights or car rentals. </p>
-            <img src="../imgs/inspirational_imgs/kayak1.png" class="img-responsive">
-            <p>There is also an interesting options that allows for more exploratory investigation of a trip. The interface offers a map with different dollar amounts representing plane tickets to different destinations. This makes it easy to view multiple places and give suggestions of where to go. However, it is difficult to differentiate where differently prices flights are. It would be interesting to have a color coordination system where the cheaper flights were green and the more expensive were red, so you could tell if there was a super good deal to Seattle but not Portland, for example. </p>
-            <img src="../imgs/inspirational_imgs/kayak4.png" class="img-responsive">
-            <p>Upon searching for a particular flight, for example, the user is presented with this screen. Options for filtering appear on the left, where a list of different options, listed by price by default, fill the rest of the screen. Kayak must make its revenue on sort of sponsorships, since they clearly have some sort of favored companies, it seems. There is a lot of information here, but most of it is very relevant, so I'd imagine it'd be hard to clean it up to be simple. </p>
-            <img src="../imgs/inspirational_imgs/kayak3.png" class="img-responsive">
-            <p>One of the most interesting features of Kayak is it's comparison engine, where it calls other, similar websites and gives you options to go to those pages. While this is a nice feature, it is probably not going to be necessary to our application. I think it clutters up Kayak a lot, since people are most likely on this site to be given all of the options and decide, not have to deal with more options like different websites then even more options on those sites. </p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="container">
-        <h2>Other Inspirations</h2>
-        <ul>
-            <li><strong>Yelp:</strong>  Yelp is a user review site which provides rankings and ideas as to what to in the area of interest. Sometimes outdated, a lot of other sites use yelp as a source (their API).</li>
-            <li><strong>OpenTable:</strong>  In the theme of planning activities, OpenTable makes it easy to make reservations at restaurants that also includes reviews and popularity of nearby restaurants. </li>
-            <li><strong>Atlas Obscura:</strong>  Off the beaten path activities and attractions to explore in different locations
-    Audience: people who want to find things to do in a location that aren’t typical tourist traps
-    Features: can search by different topics or location, maps out all attractions, allows people who have visited to give feedback about different attractions
-    Improvements: low interactivity, navigation is confusing (multiple paths to very similar pages), overall design is not engaging</li>
-            <li><strong>Google Flights:</strong>  Another flight planning website, optimized using material design and designed mobile-first.</li>
-            <li><strong>Tinder:</strong>  Tinder is a matching service with simple, intuitive actions for matching or not matching. We could abstract this idea to match users with different locations, but allow flexibility by being able to swipe different activities into the itinerary.
-</li>
-        </ul>
-    </div>
-
 
     <!-- jQuery Version 1.11.1 -->
     <script src="../js/jquery.js"></script>
