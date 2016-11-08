@@ -24,3 +24,12 @@ body {
 	font-size: 80px;
 	text-align: center;
 }
+
+.navbar-brand {
+	font-size: 24px;
+}
+
+.logo {
+	width: 150px;
+	height: auto;
+}
