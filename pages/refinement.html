@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Death Valley</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../index.html">Death Valley </a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="../imgs/ProjectBrief.pdf" target="_blank">Project Brief</a>
+                    </li>
+                    <li>
+                        <a href="../imgs/ConsentNarrative.pdf" target="_blank">Consent Narrative</a>
+                    </li>
+                    <li>
+                        <a href="inspirationalDesign.html">Inspirational Design</a>
+                    </li>
+                    <li>
+                        <a href="needsAnalysis.html">Needs Analysis</a>
+                    </li>
+                    <li>
+                        <a href="designDev.html">Design Development</a>
+                    </li>
+                    <li>
+                        <a href="prototype.html">Invision Prototype</a>
+                    </li>
+                    <li>
+                        <a href="#">Design Refinement</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container refinement panel panel-default">
+
+      <!-- <img src="../imgs/logo.png" class="img-responsive logo center-block"> -->
+      <h1 class="inspirational-design-header">Design Refinement</h1>
+      <ol class="list-group refinement-list">
+        <li class="list-group-item">Link to our design walkthrough: <a href="https://www.figma.com/file/RB3eLJD5nH4ksTN7HwmBTvNY/Full-Navigation-Map" target="_blank">FIGMA</a></li>
+        <li class="list-group-item">Link to our instructions for heuristic: <a href="prototype.html" target="_blank">SCRIPT</a></li>
+        <li class="list-group-item">Link to our Invision Prototype: <a href="https://invis.io/ZY962CJMQ" target="_blank">LEIFY</a></li>
+        <li class="list-group-item">Link to our Heuristic Feedback: <a href="https://docs.google.com/document/d/1njqq_KFIvsHO4iUiAiMDa7R7K19bvnVvn1IIbx3MAXU/edit?usp=sharing" target="_blank">FEEDBACK DOC</a></li>
+      </ol>
+
+      <h2>Writeup:</h2>
+
+      <h3>What is your design? How does it work?</h3>
+      <p>   Our app provides a quick day-planner service for people looking to explore a new area. By simply entering the number of hours you want to spend and providing a location, a streamlined set of options are generated. After selection, the app creates a route using Google maps. We believe this app would be best utilized by either business people who love to sightsee while traveling, or by leisure travelers who find themselves with an extra day in their destination.</p>
+      <p>   The app works by collecting data about how much time the user has and where the user is. It then generates a list of popular sights which the user selects those that are of interest. They can lock in options with a simple click on an add button within each of the cards for the locations. By clicking on the card, rather than the add button, the card expands to give some brief but useful information, such as hours, average rating, etc. They can also lock in the cards from the more info card. As they lock in options, a progress bar lets the user know how much time is still available in their schedule by estimating the time that the sight should take. This also includes travel time. We can estimate these with Google’s API which generates an estimated time for each location and transit time between points. </p>
+      <p>Once the user has some locations set, they can edit the items, which allows for the removal or reordering of the locations selected. The reordering of the cards will change the total time of the trip because transit times between locations will change accordingly. This will be reflected in the total progress time of the schedule. If a modification causes the total trip time to go over the user’s entered time limit, an alert will be presented to the user informing them of the effect of their change. The app will still function normally if the user selects to go over the hours that they scheduled. This ability to go overtime on the schedule could possibly become a point of confusion or annoyance, but Leify will make the user aware that they are going overtime in an attempt to preempt any issues. After the user has filled their schedule and is satisfied by the locations they have chosen, they can finalize their trip which provides a full summary of the day with all of the locations that they chose on cards. </p>
+      <p>The summary shows the expected transit time, and the expected explore time spent at each place. From this screen, a user can start a multi-point navigation for their trip and start exploring. The user can also touch any of the individual transit indicators between stops to bring up an option to navigate directly to the spot, ignoring the planned schedule. This is included to for users who may have spent too much time at one stop and can’t make their entire trip. Instead of having to go to every stop, the user can simply navigate to a destination which may have a higher appeal. This is not the main use for the app, and as such is less pronounced as a feature.</p>
+
+      <div class="row image-block">
+        <img src="../imgs/invision_screens/plan1.png" class="col-md-4">
+        <img src="../imgs/invision_screens/plan2.png" class="col-md-4">
+        <img src="../imgs/invision_screens/edit.png" class="col-md-4">
+      </div>
+
+      <h3>What changed (especially: between paper prototyping and the proposed final design), and why did you change it? [Provide evidence/grounding.] Your answer may include any of the following:</h3>
+
+      <div class="container">
+        <h4>Tradeoffs did you make in bringing it online</h4>
+        <p>We left a lot of minute functionality out of the online version to avoid having to make a lot of specific pages that don’t showcase the meat of the website. Things like picking the number of hours were limited to one predetermined response for the sake of simplicity. Additionally, the current model is limited to San Francisco, with roughly nine predetermined visiting points with only three being selectable, and they can’t be reordered yet. Overall we had to remove a lot of nuance in order to make this online version, but it will ultimately be added back in when we actually make the website.</p>
+
+        <h4>Responses to paper prototyping user feedback</h4>
+        <p>The feedback we got during the paper prototype phase of the project led us to the design that we have currently. Our original design had a lot more interactions and details, which testers said were confusing or detracted from the overall use of Leify. The main feedback from users was about the preferences page, the location cards and entry methods for information about the trip. In our paper prototype, testers cited confusion on the preferences screen, where the variety of dropdown menus and dozens of options became overwhelming. Other testers disliked the interactions with the location cards, stating that there were too many possible interactions, such as swiping left and right, clicking on the card, dismissing the card with an “X” or adding it with a “+”. Testers felt that having this many options would be distracting and they may not end up using some of them. We were able to take this feedback and adjust our screens to match, taking out some of the options to make all the interactions less overwhelming. The changes made to the location cards and preferences page were experimental, and iterated on many more times after user testings. The feedback about other smaller issues, like how information about the trip is entered, could be fixed with just 1-2 more iterations. Most people found that having a keypad for entering the duration of their trip allowed for too much choice. During testing, we miscommunicated what the “Set time” input meant so the testers ended up trying to add too much time to the timer. We took that confusion and changed both our explanation of what the input meant and how the input was entered in an effort to make the program easier to use. The feedback that we got from testers on our paper prototyping was extremely valuable to the development of Leify, forcing us to better explain our ideas and find ways to better communicate the expected interactions within the project. </p>
+
+        <h4>Responses to team-internal deliberations, including but not limited to cognitive walkthrough or guidelines.</h4>
+        <p>Though we originally didn’t plan on having visiting location choices or the ability to edit the order of visited locations, due to team discussions, we determined that both were sufficiently useful to be included. The color scheme also underwent a lot of change from the paper prototype to the online version. One of the ongoing debates is over the best way to word the “how much time do you have” section of the introductory screen. We have a lot of user feedback saying that that part was confusing, and led them to believe it was referring to the length of the user's’ trip instead of the time they wanted to spend exploring that day. We moved away from text boxes and manual number entering in favor of scrolling numbers and pre supported options. We replaced ‘x’ buttons with multiple options, and a ‘+’ next to each of them capable of adding it to the current list of places to visit. </p>
+
+        <h4>Responses to heuristic evaluation feedback.</h4>
+        <p>We received feedback that we should use a number pad for entering the number of hours for the trip instead of a scroll bar with numbers. We decided to disregard this feedback because it was based off incorrect notions on navigating said scroll bar. For instance, the evaluators believed the user had to hit the up or down arrows every time they wanted to move one number, when in reality it is a scrollable menu. Additionally, we don’t want the user to be confused about how long the trip is supposed to be, and we would like to limit all trips to about 12 hours to keep them reasonable. We were also told that our initial screen was misleading in regard to adding a location, which we are also disregarding because the problem lay in their trying to access functionality we plan to implement. There were comments on our ‘back’ button functionality, which sends the user back further than they planned, which is an artefact of the invision implementation more than a design choice. It was suggested that we replace our “Review your trip” button with “Confirm your trip” which we don’t think we should do. We originally used our phrasing to take the pressure off the user and keep them from thinking they were committing to anything with the ‘review’ screen, and changing the language to ‘confirm’ would undo that. The feedback on our money preferences leads us to think we should add help text at the top of the preferences screen to clarify spending ranges. We were also alerted to the size of label text on our preferences screen, which we will make more readable. The remaining feedback can mostly be chalked up to things we plan on implement later or things that were impossible in invision.</p>
+
+      </div>
+      <div class="row image-block">
+        <img src="../imgs/invision_screens/moreInfo.png" class="col-md-4">
+        <img src="../imgs/invision_screens/pref.png" class="col-md-4">
+        <img src="../imgs/invision_screens/summary.png" class="col-md-4">
+      </div>
+
+      <h3>What (if any) key insights did you gain during this phase? [What evidence supports these insights?]</h3>
+      <p>Early in this phase, we received feedback about our newly created “Preferences” screen that proved to be very useful. A few minutes after getting a working mockup of the screens on a phone, we showed the prototype to Sue and Ellen. They gave us the insight that there were too many options on the new preferences screen. We hadn’t looked at the screen on the phone yet, and upon looking we completely agreed. The screen that had looked good on our computer when we could zoom in was almost unreadable on the phone. There was an overwhelming number of buttons, with text that was much to small to read. This insight from our wonderful NINJA and instructor helped us look at all of our pages differently, making sure that we didn’t overwhelm the user with too many options or overcrowd the screens. </p>
+      <p>For our heuristic evaluation, we had asked our evaluators to use a script we had provided and a prototype of our application we had built in Invision. We hadn’t included every intermediate page in our Invision prototype--this, combined with a lack of clarity in our instructions lead to confusion for the evaluators which detracted from their ability to give feedback about the actual interface. As an example: We hadn’t fully implemented all the screens that could result from pushing Yes or No on a popup. As a result, someone was confused as to what they were doing wrong with interacting with the interface when they clicked No and nothing happened on the application. In the future, we should make it clear in our walkthrough what functionality works and what doesn’t to prevent this confusion.</p>
+      <p>We didn’t make it clear in our script that our app is a day trip generator, and thus it would only allow users to pick from a generated list of options instead of expecting users to choose themselves. Additionally, as a day trip planner, users are expected to spend a maximum of 12 hours. As a result of this confusion, users were stilted at their inability to choose trip options, and confused as to why we choose a selection wheel instead of a keypad when entering the amount of time they have for the trip. We need to have a short blurb at the top of future scripts we present that explain in full what our app can and can’t do. We should also have helper text, or explanation screens inside our app that explain the purpose of our application to first time users who might not be fully clear what their expectations should be.</p>
+      <p>Our design presents the user the “Plan your trip” screen of our app without any initial setup screens because we wanted the users to be able to immediately jump into planning without having to sit through initialization screens. While this was beneficial to an extent, our evaluators were overwhelmed by the first “Plan your trip” screen because there wasn’t a clear flow of execution, and they had no knowledge of what to expect to aid them in figuring out what their expected order of actions should be. We found that users tend to intuitively feel that interactions are ordered top-down or left-right, so our log-in button on the top-right disrupts the flow.</p>
+
+      <h3>What questions do you have now about your project (i.e., are there things you would like to investigate)? What shortcomings are you aware of?</h3>
+      <p>Now that we have an automated prototype, we are curious about how a user would interact if they were not given a script, or potentially a less guided one. As of now, our script leads the user on a pretty specific path, moving from one screen to another in a relatively predefined order. Including new screens for every option the user could click on would turn into hundreds of screens we would have to build in Invision, which would have taken us too long. We compromised by building only the screens we thought would showcase all of the features of our app. Due to this, we only got a sense for how the user would interact with our app given these specific instructions. We don't know if the user interface would be as intuitive if the user was not given any instructions and instead left free to explore and click any buttons they wanted. </p>
+      <p>Moving forward, we are aware of several shortcomings with our design based on the Heuristic Evaluations that we received. We have some work to do regarding optimizing the information display of a mobile device, which is small compared to a computer screen. We were used to building it in Figma on our computers so we didn't always get a good sense for the size of icons, text, and images on a mobile display. We also need to rethink and possibly change the first interaction our users have with the app. Our users have some confusion at first because there were no instructions on the first page, and wanted some guidance before jumping into planning a trip. A shortcoming is a lack of clarity that our app is a day planner, not for an extended trip planner. </p>
+      <p>Another shortcoming is the back button we currently have. We found users that hit the back button were frustrated that it took them back to the home page rather than back one screen. We need to have more transparency in what the back button does to have it mapped to what the user expects. </p>
+      <p>I think we would also like to investigate how different users interact with our app. We have received great feedback from our usability studies with other students, but we have not addressed all people in our user group, such as adventurous businesspeople. We might receive different feedback from users who are older than our peers, people that have not been using smartphones as long, not as comfortable with the internet, etc. This could change some design decisions that we make. Also, it could be useful to test our accessibility by having usability studies with people that would potentially want to use our app but they have limits in how app interactions, like color blindness, for example. This could also help us improve our app to make it more universal and intuitive across our user group.</p>
+
+      <p></p>
+
+      <p></p>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery Version 1.11.1 -->
+    <script src="../js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
